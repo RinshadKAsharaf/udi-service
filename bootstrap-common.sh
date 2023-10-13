@@ -19,7 +19,7 @@ mkdir -p `dirname $CHEZMOI_CONF`
 curl -fsSL https://raw.githubusercontent.com/RinshadKAsharaf/udi-service/main/dot_config/chezmoi/chezmoi.toml.example > $CHEZMOI_CONF
 chmod 0600 $CHEZMOI_CONF
 
-echo "Netspective Labs Home (NLH) admin Debian-typical boostrap complete. Installed:"
+echo "Universal Data Infrastructure (UDI) Service Debian-typical boostrap complete. Installed:"
 echo " - asdf (version manager for languages, runtimes, etc.)"
 echo " - direnv (per-directory environment variables loader, via asdf)"
 echo ""

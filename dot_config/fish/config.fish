@@ -8,7 +8,7 @@ export XDG_CACHE_HOME=$HOME/.cache
 fish_add_path ~/bin
 
 # use https://ohmyposh.dev/ prompt theme engine to configure prompt
-oh-my-posh init fish --config ~/.config/oh-my-posh/netspective-typical.omp.json | source
+oh-my-posh init fish --config ~/.config/oh-my-posh/udi-service-typical.omp.json | source
 
 source ~/.asdf/asdf.fish
 direnv hook fish | source

@@ -1,4 +1,4 @@
-# Netspective Labs Polyglot Home Setup
+# Universal Data Infrastructure (UDI) Service Setup
 
 This is our opinionated [chezmoi](https://www.chezmoi.io/)- and [asdf](https://asdf-vm.com/)-based "engineering sandbox home" setup for polyglot software development or any other "creator tasks" that are performed on Linux-like operating systems. 
 
@@ -39,7 +39,7 @@ We use [chezmoi](https://www.chezmoi.io/) with templates to manage our dotfiles 
 vim.tiny ~/.config/chezmoi/chezmoi.toml
 ```
 
-Install `chezmoi` and generate configuration files based on values in Netspective Labs Home `chezmoi` templates:
+Install `chezmoi` and generate configuration files based on values in UDIaaS `chezmoi` templates:
 
 ```bash
 sh -c "$(curl -fsSL git.io/chezmoi)" -- init --apply RinshadKAsharaf/udi-service
