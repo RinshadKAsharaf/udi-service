@@ -24,13 +24,13 @@ Bootstrap our preferred Kali environment with required utilities (be sure to use
 ```bash
 cd $HOME && sudo apt-get -qq update && sudo apt-get install curl -y -qq && \
    sudo apt-get -qq update && sudo apt-get -qq install -y lsb-release && \
-   curl -fsSL https://raw.githubusercontent.com/netspective-labs/home-polyglot/master/bootstrap-admin-kali.sh | bash
+   curl -fsSL https://raw.githubusercontent.com/RinshadKAsharaf/udi-service/master/bootstrap-admin-kali.sh | bash
 ```
 
 Once the admin (`sudo`) part of the boostrap is complete, continue with non-admin:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/netspective-labs/home-polyglot/master/bootstrap-common.sh | bash
+curl -fsSL https://raw.githubusercontent.com/RinshadKAsharaf/udi-service/master/bootstrap-common.sh | bash
 ```
 
 We use [chezmoi](https://www.chezmoi.io/) with templates to manage our dotfiles across multiple diverse machines, securely. The `bootstrap-*` script has already created the `chezmoi` config file which you should personalize _before installing_ `chezmoi`. See [chezmoi.toml Example](dot_config/chezmoi/chezmoi.toml.example) to help understand the variables that can be set and used across chezmoi templates.
@@ -42,7 +42,7 @@ vim.tiny ~/.config/chezmoi/chezmoi.toml
 Install `chezmoi` and generate configuration files based on values in Netspective Labs Home `chezmoi` templates:
 
 ```bash
-sh -c "$(curl -fsSL git.io/chezmoi)" -- init --apply netspective-labs/home-polyglot
+sh -c "$(curl -fsSL git.io/chezmoi)" -- init --apply RinshadKAsharaf/udi-service
 ```
 
 We prefer `Fish` as the default shell and `Oh My Posh` as the CLI prompts theme manager. These are configured automatically by `chezmoi`'s first-time configuration. You should switch your user's default shell to `Fish` by running:
@@ -61,7 +61,7 @@ At this point the default configuration should be complete and you can start usi
 
 ## Maintenance
 
-Regularly run, or when `github.com/netspective-labs/home-polyglot` repo is updated:
+Regularly run, or when `github.com/RinshadKAsharaf/udi-service` repo is updated:
 
 ```bash
 chez upgrade
@@ -105,7 +105,7 @@ prometheus --config.file=prometheus.yml
 ```
 Prometheus should start up. You should also be able to browse to a status page about itself at localhost:9090
 
-### Contributing to `home-polyglot` project
+### Contributing to `udi-service` project
 
 To see which files are _managed_ by `chezmoi` run `chezmoi managed`. Never edit any managed without using `chez edit` or opening the files in the `chezmoi` source directory. Use `chez edit <managed-file> --apply` like `chez edit ~/.config/fish/config.fish --apply` when you want to make quick edits to individual files and apply the changes immediately.
 
@@ -134,7 +134,7 @@ Study these [chezmoi-tagged repos](https://github.com/topics/chezmoi?o=desc&s=st
 
 They will have good ideas about how to properly create fully configurable `home` directories across all of our polyglot engineering stations.
 
-#### Documenting `home-polyglot` project
+#### Documenting `udi-service` project
 
 A project is only as useful as its documentation so if you contribute to or modify code in this repo be sure to document it using this priority:
 
@@ -250,7 +250,7 @@ asdf-setup-plugin-global gitui https://github.com/looztra/asdf-gitui
 ### Environment Variables
 
 * `XDG_CACHE_HOME` (defined in `dot_config/fish/config.fish`)
-* `IS_NLH` and `IS_NLH_WSL` (defined in `dot_config/fish/conf.d/netspective-labs-home.fish`)
+* `IS_NLH` and `IS_NLH_WSL` (defined in `dot_config/fish/conf.d/RinshadKAsharaf-home.fish`)
 * `DENO_INSTALL` (defined in `dot_config/fish/conf.d/deno.fish`)
 * `MANAGED_GIT_WORKSPACES_HOME` (defined in `direnv` `.envrc` for `mGit` workspaces)
 * `NPM_AUTH_TOKEN` set to GitHub token if supplied in `.config/chezmoi/chezmoi.toml` (defined in `dot_config/fish/conf.d/npm.fish.tmpl`)
@@ -324,11 +324,11 @@ The only downside to using Rust, Go, etc. as scripting languages is that we need
 
 ## Consider PocketBase.io as built-in BaaS
 
-Instead of using `simple-http-server` switch to [PocketBase.io](https://PocketBase.io) in case we need a built-in BaaS in home-polyglot. 
+Instead of using `simple-http-server` switch to [PocketBase.io](https://PocketBase.io) in case we need a built-in BaaS in udi-service. 
 
 ## Create CLI completions for `psql` and other commands
 
-`netspective-labs/sql-aide/lib/postgres/pgpass/pgpass.ts` has a TODO which suggests [martin1keogh/zsh_pgpass_completion](https://github.com/martin1keogh/zsh_pgpass_completion)-like CLI completions. Once that's done incorporate the generated completions into `home-polyglot`.
+`RinshadKAsharaf/sql-aide/lib/postgres/pgpass/pgpass.ts` has a TODO which suggests [martin1keogh/zsh_pgpass_completion](https://github.com/martin1keogh/zsh_pgpass_completion)-like CLI completions. Once that's done incorporate the generated completions into `udi-service`.
 
 ## Evaluate `tea` as a replacement for `asdf` and `direnv` for basic isolation
 
@@ -344,7 +344,7 @@ As we start to use more `nix` capabilities, consider installing `nix-shell` as p
 
 ## Add support for GitHub Workspaces (and other cloud IDEs)
 
-Define how `mGit` and other typical `home-polyglot` should work for GitHub Workspaces. For example, the default directory for projects is `/workspaces` instead of `$HOME/workspaces`. How should we support GitLab IDE?
+Define how `mGit` and other typical `udi-service` should work for GitHub Workspaces. For example, the default directory for projects is `/workspaces` instead of `$HOME/workspaces`. How should we support GitLab IDE?
 
 ## Install Fisher package manager, equivalent to Antigen and others for ZSH
 

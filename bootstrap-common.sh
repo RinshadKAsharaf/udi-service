@@ -16,7 +16,7 @@ ln -s $ASDF_DIR/completions/asdf.fish ~/.config/fish/completions
 # TODO: switch to https://www.chezmoi.io/reference/special-files-and-directories/chezmoi-format-tmpl/
 export CHEZMOI_CONF=~/.config/chezmoi/chezmoi.toml
 mkdir -p `dirname $CHEZMOI_CONF`
-curl -fsSL https://raw.githubusercontent.com/netspective-labs/home-polyglot/main/dot_config/chezmoi/chezmoi.toml.example > $CHEZMOI_CONF
+curl -fsSL https://raw.githubusercontent.com/RinshadKAsharaf/udi-service/main/dot_config/chezmoi/chezmoi.toml.example > $CHEZMOI_CONF
 chmod 0600 $CHEZMOI_CONF
 
 echo "Netspective Labs Home (NLH) admin Debian-typical boostrap complete. Installed:"
@@ -29,7 +29,7 @@ echo "$ vi ~/.config/chezmoi/chezmoi.toml"
 echo ""
 echo "    THEN: Continue installation by bootstrapping \`chezmoi\` from GitHub:"
 echo "    -------------------------------------------------------------------"
-echo "    $ sh -c \"\$(curl -fsSL git.io/chezmoi)\" -- init --apply netspective-labs/home-polyglot"
+echo "    $ sh -c \"\$(curl -fsSL git.io/chezmoi)\" -- init --apply RinshadKAsharaf/udi-service"
 echo ""
 echo "        FINALLY: Set Fish as the default shell, exit SSH session then restart:"
 echo "        ---------------------------------------"

@@ -51,4 +51,4 @@ echo ""
 echo "Continue installation by installing non-admin (user) packages:"
 echo "--------------------------------------------------------------"
 echo ""
-echo '$ curl -fsSL https://raw.githubusercontent.com/netspective-labs/home-polyglot/master/bootstrap-common.sh | bash'
+echo '$ curl -fsSL https://raw.githubusercontent.com/RinshadKAsharaf/udi-service/master/bootstrap-common.sh | bash'
