@@ -21,10 +21,10 @@ RED='\033[0;31m'
 YELLOW='\033[1;33m'
 NC='\033[0m' # No Color
 
-NLH_EGET_LOG=~/.nlh-intall-eget-packages.sh.log
+NLH_EGET_LOG=~/.udi-intall-eget-packages.sh.log
 touch $NLH_EGET_LOG
 echo "--- `date` ---" >> $NLH_EGET_LOG
-printf "Installing GitHub-fetchable packages (tail -f ~/.nlh-intall-eget-packages.sh.log)..."
+printf "Installing GitHub-fetchable packages (tail -f ~/.udi-intall-eget-packages.sh.log)..."
 
 # https://github.com/zyedidia/eget installs prebuilt binaries from GitHub
 # - uses ~/.eget.toml configuration by default (use `chez edit .eget.toml`)

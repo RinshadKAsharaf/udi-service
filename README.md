@@ -250,7 +250,6 @@ asdf-setup-plugin-global gitui https://github.com/looztra/asdf-gitui
 ### Environment Variables
 
 * `XDG_CACHE_HOME` (defined in `dot_config/fish/config.fish`)
-* `IS_NLH` and `IS_NLH_WSL` (defined in `dot_config/fish/conf.d/RinshadKAsharaf-home.fish`)
 * `DENO_INSTALL` (defined in `dot_config/fish/conf.d/deno.fish`)
 * `MANAGED_GIT_WORKSPACES_HOME` (defined in `direnv` `.envrc` for `mGit` workspaces)
 * `NPM_AUTH_TOKEN` set to GitHub token if supplied in `.config/chezmoi/chezmoi.toml` (defined in `dot_config/fish/conf.d/npm.fish.tmpl`)
@@ -328,7 +327,7 @@ Instead of using `simple-http-server` switch to [PocketBase.io](https://PocketBa
 
 ## Create CLI completions for `psql` and other commands
 
-`RinshadKAsharaf/sql-aide/lib/postgres/pgpass/pgpass.ts` has a TODO which suggests [martin1keogh/zsh_pgpass_completion](https://github.com/martin1keogh/zsh_pgpass_completion)-like CLI completions. Once that's done incorporate the generated completions into `udi-service`.
+`netspective-labs/sql-aide/lib/postgres/pgpass/pgpass.ts` has a TODO which suggests [martin1keogh/zsh_pgpass_completion](https://github.com/martin1keogh/zsh_pgpass_completion)-like CLI completions. Once that's done incorporate the generated completions into `udi-service`.
 
 ## Evaluate `tea` as a replacement for `asdf` and `direnv` for basic isolation
 
